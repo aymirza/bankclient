@@ -1,12 +1,14 @@
-package com.example.bankclient;
+package com.example.bankclient.service;
 
+import com.example.bankclient.model.Client;
+import com.example.bankclient.repository.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class ClientServiceImpl implements IClientService{
+public class ClientServiceImpl implements IClientService {
 
 
     @Autowired

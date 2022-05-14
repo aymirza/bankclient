@@ -1,4 +1,6 @@
-package com.example.bankclient;
+package com.example.bankclient.model;
+
+import com.example.bankclient.model.AuditModel;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -8,7 +10,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "post")
-public class Post extends AuditModel{
+public class Post extends AuditModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY )
     private Long id;

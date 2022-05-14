@@ -1,4 +1,4 @@
-package com.example.bankclient;
+package com.example.bankclient.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.annotation.CreatedDate;

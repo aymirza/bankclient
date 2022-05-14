@@ -1,6 +1,9 @@
-package com.example.bankclient;
+package com.example.bankclient.service;
 
 
+import com.example.bankclient.repository.PostRepository;
+import com.example.bankclient.example.ResourceNotFoundException;
+import com.example.bankclient.model.Post;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

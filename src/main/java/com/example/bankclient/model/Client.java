@@ -1,6 +1,8 @@
-package com.example.bankclient;
+package com.example.bankclient.model;
 
 import org.hibernate.annotations.GeneratorType;
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.id.enhanced.SequenceStyleGenerator;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -10,8 +12,9 @@ import java.util.Date;
 public class Client {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_client")
+    @SequenceGenerator(name = "id_seq", sequenceName = "id_seq",   allocationSize = 00000000)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "id_seq")
+    @Column(name = "id_client",nullable = false)
     private Long id;
     @Column(name = "imiya")
     private String imiya;

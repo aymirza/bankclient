@@ -1,8 +1,9 @@
-package com.example.bankclient;
+package com.example.bankclient.controller;
 
 
+import com.example.bankclient.service.ClientServiceImpl;
+import com.example.bankclient.model.Client;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
