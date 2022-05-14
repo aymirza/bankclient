@@ -1,6 +1,8 @@
-package com.example.bankclient;
+package com.example.bankclient.model;
 
 import org.hibernate.annotations.GeneratorType;
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.id.enhanced.SequenceStyleGenerator;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -11,7 +13,7 @@ public class Client {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_client")
+    @Column(name = "id_client", nullable = false)
     private Long id;
     @Column(name = "imiya")
     private String imiya;
@@ -21,27 +23,18 @@ public class Client {
     private String otchestvo;
     @Column(name = "data_rojdeniya")
     private Date data_rojdeniya;
-
-    public String getSrok_passporta() {
-        return srok_passporta;
-    }
-
-    public void setSrok_passporta(String srok_passporta) {
-        this.srok_passporta = srok_passporta;
-    }
-
     @Column(name = "address")
     private String address;
     @Column(name = "number_passport")
     private String number_passport;
-
     @Column(name = "srok_passporta")
-    private String srok_passporta;
+    private Date srok_passporta;
+
 
     public Client() {
     }
 
-    public Client(Long id, String imiya, String familiya, String otchestvo, Date data_rojdeniya, String address, String number_passport) {
+    public Client(Long id, String imiya, String familiya, String otchestvo, Date data_rojdeniya, String address, String number_passport, Date srok_passporta) {
         this.id = id;
         this.imiya = imiya;
         this.familiya = familiya;
@@ -49,6 +42,7 @@ public class Client {
         this.data_rojdeniya = data_rojdeniya;
         this.address = address;
         this.number_passport = number_passport;
+        this.srok_passporta = srok_passporta;
     }
 
     public Long getId() {
@@ -105,5 +99,13 @@ public class Client {
 
     public void setNumber_passport(String number_passport) {
         this.number_passport = number_passport;
+    }
+
+    public Date getSrok_passporta() {
+        return srok_passporta;
+    }
+
+    public void setSrok_passporta(Date srok_passporta) {
+        this.srok_passporta = srok_passporta;
     }
 }

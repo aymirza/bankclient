@@ -1,4 +1,6 @@
-package com.example.bankclient;
+package com.example.bankclient.service;
+
+import com.example.bankclient.model.Client;
 
 import java.util.List;
 

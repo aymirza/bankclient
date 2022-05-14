@@ -1,4 +1,4 @@
-package com.example.bankclient;
+package com.example.bankclient.example;
 
 import org.springframework.web.bind.annotation.ResponseStatus;
 

@@ -1,5 +1,6 @@
-package com.example.bankclient;
+package com.example.bankclient.repository;
 
+import com.example.bankclient.model.Comment;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
