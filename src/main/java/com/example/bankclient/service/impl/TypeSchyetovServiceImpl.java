@@ -1,7 +1,7 @@
 package com.example.bankclient.service.impl;
 
 import com.example.bankclient.model.TypeSchyotov;
-import com.example.bankclient.repository.TypeSchyotovRepository;
+import com.example.bankclient.repository.TypeSchyetovRepository;
 import com.example.bankclient.service.ITypeSchyotovService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,10 +9,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class TypeSchyotovServiceImpl implements ITypeSchyotovService {
+public class TypeSchyetovServiceImpl implements ITypeSchyotovService {
 
     @Autowired
-    private TypeSchyotovRepository typeSchyotovRepository;
+    private TypeSchyetovRepository typeSchyotovRepository;
 
     @Override
     public List<TypeSchyotov> allTypeSchyotov() {
@@ -26,7 +26,7 @@ public class TypeSchyotovServiceImpl implements ITypeSchyotovService {
 
     @Override
     public TypeSchyotov saveTypeSchyotov(TypeSchyotov typeSchyotov) {
-        return null;
+        return typeSchyotovRepository.save(typeSchyotov);
     }
 
     @Override

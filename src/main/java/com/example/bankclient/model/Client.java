@@ -12,7 +12,11 @@ import java.util.Date;
 public class Client {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @SequenceGenerator(name = "pet_seq",
+            sequenceName = "pet_sequence",
+            initialValue = 00000001, allocationSize = 99999999)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "pet_seq")
+//  @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_client", nullable = false)
     private Long id;
     @Column(name = "imiya")
